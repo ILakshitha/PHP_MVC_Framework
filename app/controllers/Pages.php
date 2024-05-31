@@ -8,9 +8,13 @@ class Pages extends Controller {
 
     }
 
-    public function about($name){
+    public function about($name,$age){
         //echo'Hi, '.$name;
-        $this->view('v_about');
+        $data=[
+            'userName' => $name,
+            'userAge'=> $age
+        ];
+        $this->view('v_about',$data);
 
     }
 }
