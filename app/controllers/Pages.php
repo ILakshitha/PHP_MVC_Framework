@@ -1,5 +1,5 @@
 <?php
-class Pages{
+class Pages extends Controller {
     public function __construct(){
         //echo'this is the pages controllers';
     }
@@ -9,7 +9,8 @@ class Pages{
     }
 
     public function about($name){
-        echo'Hi, '.$name;
+        //echo'Hi, '.$name;
+        $this->view('v_about');
 
     }
 }
