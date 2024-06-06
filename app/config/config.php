@@ -1,4 +1,12 @@
+
+
 <?php
+//Database configaration
+define('DB_HOST',"localhost");
+define('DB_USER','root');
+define('DB_ PASSWORD','');
+define('DB_NAME','PHP_MVC_Framework_DB');
+//APPROOT
  define('APPROOT',dirname(dirname(__FILE__)));
 
  //Url Root
