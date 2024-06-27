@@ -9,11 +9,10 @@ class Pages extends Controller {
 
     }
 
-    public function about($name,$age){
-        //echo'Hi, '.$name;
+    public function about(){
+        $Users = $this->pagesModel->getUsers();
         $data=[
-            'userName' => $name,
-            'userAge'=> $age
+           "users"->$Users
         ];
         $this->view('v_about',$data);
 
