@@ -10,7 +10,8 @@ class Database{
     private $error;
 
     public function __construct(){
-        $dsn = 'mysql:host ='.$this->host.';dbname ='.$this->dbname;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -53,7 +54,7 @@ class Database{
 
     //Execute the  prepared statement
     public function execute(){
-        return $this->Statement->execute();
+        return $this->statement->execute();
     }
 
     //GEt multiple recodes as the result
