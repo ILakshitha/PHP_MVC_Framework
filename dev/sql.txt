@@ -10,3 +10,24 @@ INSERT INTO Users(name,age) VALUES("ishan",23);
 INSERT INTO Users(name,age) VALUES("lakshitha",23);
 INSERT INTO Users(name,age) VALUES("kalpa",22);
 INSERT INTO Users(name,age) VALUES("asela",21);
+
+
+
+CREATE TABLE Users (
+    id INT AUTO INCREMENT,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE Post (
+    id INT AUTO INCREMENT,
+    user_id INT,
+    title VARCHAR(255),
+    body TEXT
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+    FOREIGN KEY(user_id) REFERENCES user(id)ON DELETE CASCADE
+);

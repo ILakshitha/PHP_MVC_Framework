@@ -1,5 +1,5 @@
 <?php require APPROOT."/views/inc/components/header.php"; ?>
-<h1> users</h1>
+<h1> Users</h1>
 <?php
 foreach($data['users'] as $user):
 ?>
