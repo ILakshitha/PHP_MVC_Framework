@@ -1,4 +1,4 @@
-<?php require APPROOT."/views/inc/components/header.php"; ?>
+<?php require APPROOT."/views/inc/header.php"; ?>
 <h1> Users</h1>
 <?php
 foreach($data['users'] as $user):
@@ -7,4 +7,4 @@ foreach($data['users'] as $user):
 
 <?php endforeach; ?>
 
-<?php require APPROOT."/views/inc/components/footer.php"; ?>
+<?php require APPROOT."/views/inc/footer.php"; ?>
