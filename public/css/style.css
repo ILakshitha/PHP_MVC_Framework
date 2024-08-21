@@ -1,4 +1,6 @@
-@import url('./components/topnavbar_style.css');
+/*this is our css library*/
+
+@import url('components/topnavbar_style.css');
 
 h1{
     color:rgb(0, 0, 0);
