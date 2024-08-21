@@ -9,6 +9,12 @@ class Users extends controller
 
         $this->view('users/v_register', $data);
     }
+
+    public function login(){
+        $data =[];
+
+        $this->view('users/v_login', $data);
+    }
 }
 
 
