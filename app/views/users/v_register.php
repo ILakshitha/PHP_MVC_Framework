@@ -6,8 +6,8 @@
 <h1>User sign up<h1>
     <p>please fill the form for register</p>
 
-<div class="container" style="padding: 20px; margin: 20px auto; max-width: 600px;">
-<form action="<?php echo URLROOT?>/users/register">
+<div class="container" style="padding-right: 20px;">
+<form>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter Your Name"  value="<?php echo $data['name'];?>">
