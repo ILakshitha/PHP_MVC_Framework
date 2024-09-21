@@ -6,7 +6,7 @@
 <h1>User sign up<h1>
     <p>please fill the form for register</p>
 
-<div class="container" style="">
+<div class="container" style="padding-right: 20px;">
 <form>
             <div class="form-group">
                 <label for="name">Name</label>
