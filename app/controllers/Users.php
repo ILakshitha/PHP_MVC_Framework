@@ -1,7 +1,9 @@
 <?php
 class Users extends controller
 {
+    private $userModel;
     public function __construct(){
+        $this->userModel = $this->model('M_User');
 
     }
     public function register(){
@@ -30,16 +32,46 @@ class Users extends controller
             ];
             //validate each inputs
             //validate name
-            // if(empty($data['name'])){
-            //     date['name_err'] ='please enter the name';
-            // }
+            if(empty($data['name'])){
+                $data['name_err'] ='please enter the name';
+            }
+              
+            //validate email
+            if(empty($data['email'])){
+                $data['email_err'] ='please enter the email';
+            }
+            else{
+
             
-            // //validate email
-            // if(empty($data['name'])){
-            //     date['name_err'] ='please enter the name';
-            // }
             
             //cheak email is already registered or not
+            if ($this->userModel->findUserByEmail($data['email'])) {
+                $data['email_err'] ='Email have already registered';
+                # code...
+
+            }
+
+            //validate password
+            if (empty($data['password'])) {
+                $data['password_err'] ='please enter the password';
+            }elseif(empty($data['password'])) {
+                $data['repeat_password_err'] ='please enter the confirm password';
+
+            }
+            else{
+                if($data['password'] = $data['repeat_password']){
+                    $data['repeat_password'] ="Password not matching";
+                }
+            }
+
+            if(empty($data["name_err"]) && empty($data['email_err'])&& empty($data['password_err']) && empty($data['repeat_password_err'])){
+                //encript password
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                //register user
+            }
+
+            }
             
         }else{
             //initial form

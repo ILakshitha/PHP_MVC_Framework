@@ -49,7 +49,7 @@ class Database{
 
             }
         }
-        $this->statement->bindValue($param, $value,$type);
+        $this->statement->bindValue($params, $value,$type);
     }
 
     //Execute the  prepared statement

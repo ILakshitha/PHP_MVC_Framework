@@ -22,6 +22,7 @@ h1 {
 
 .form-group {
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 .form-group label {
@@ -30,7 +31,7 @@ h1 {
 }
 
 .form-group input {
-    width: 100%;
+    width: 90%;
     padding: 8px;
     margin-top: 5px;
     font-size: 16px;
@@ -39,7 +40,7 @@ h1 {
 }
 
 .submit-btn {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -47,6 +48,7 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 80px;
 }
 
 .submit-btn:hover {
